@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- tailwinds css -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- css -->
+   <link rel="stylesheet" href="style.css">
+   <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body class="w-full flex flex-col items-center justify-center">
+
+  
+  
+
+
+  <div class="container w-[375px] flex flex-col justify-center
+  items-center p-[20px] gap-[40px] pb-[100px] md:w-[1400px] md:px-[100px]">
+
+  <!-- nav-bar -->
+  <div class="nav-bar w-full flex justify-between items-center relative pt-[25px] px-[15px] pb-[10px]">
+
+
+        <div class="logo">
+          <img src="assets/images/logo.svg" alt="logo" class="logo w-full">
+        </div>
+        
+        <ul class="nav-link hidden md:block md:flex md:gap-[20px] md:text-[12px]">
+          <li>Home</li>
+          <li>News</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+        <ul class="nav-link hidden flex flex-col gap-[20px]" id="menu">
+        
+          
+          <li>Home</li>
+          <li>News</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+
+        <div class="btns md:hidden">
+
+          <button onclick="openMenu()">
+          <img src="assets/images/icon-menu.svg">
+        </button>
+
+          <button class="absolute top-[30px] right-[0]" onclick="closeMenu()" id="close-btn">
+            <img src="assets/images/icon-menu-close.svg">
+          </button>
+        </div>
+        
+      </div>
+
+    <div class="section-one w-full flex flex-col justify-center items-center gap-[40px] md:grid md:grid-cols-3">
+
+      <div class="w-full
+       flex flex-col justify-center items-center gap-[15px] col-span-2">
+        <div class="hero-image w-full h-[300px] bg-[url(assets/images/image-web-3-mobile.jpg)] bg-cover bg-no-repeat md:bg-[url(assets/images/image-web-3-desktop.jpg)]"></div>
+
+        <div class="the-bright flex flex-col justify-center gap-[5px] md:flex-row">
+
+          <div class="the w-full text-[45px] font-[800] leading-11">The Bright Future of Web 3.0?</div>
+
+          <div class="the-para flex flex-col justify-center gap-[10px] items-start md:w-[70%]">
+            <p class="text text-[13px]">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+            <a href="#" class="bg-red-300 px-[25px] py-[5px] text-[10px] font-bold">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="second-part w-full flex flex-col justify-center items-start gap-[20px] px-[20px] py-[20px]">
+        <h1 class="text-[40px]">New</h1>
+        <div class=" w-full flex flex-col gap-[20px]">
+          <p class="second-part-para">Hydrogen VS Electric Cars <br><span>Will hydrogen-fueled cars ever catch up to EVs?</span></p>
+          <p class="second-part-para">The Downsides of AI Artistry <br> <span> What are the possible adverse effects of on-demand AI image generation?</span></p>
+          <p>Is VC Funding Drying Up? <br><span>Private funding by VC firms is down 50% YOY. We take a look at what that means.</span></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-two w-full flex flex-col justify-center items-center gap-[20px] md:flex-row">
+
+      <div class="thumbnail-1 flex w-full justify-between gap-[20px]">
+        <img src="assets/images/image-retro-pcs.jpg" class="w-[100px] ">
+        <div class="thumbnail-text w-full flex flex-col justify-between items-start">
+          <p class="text-[30px] font-[500]">01</p>
+          <b class="text-[18px]">Reviving Retro PCs</b>
+          <small class="text-[15px]">What happens when old PCs are given modern upgrades?</small>
+        </div>
+      </div>
+
+      <div class="thumbnail-2 flex w-full justify-between gap-[20px]">
+        <img src="assets/images/image-top-laptops.jpg" class="w-[100px]">
+        <div class="thumbnail w-full flex flex-col justify-between items-start">
+          <p class="text-[30px] font-[500]">02</p>
+          <b class="text-[18px]">Top 10 Laptops of 2022</b>
+          <small>Our best picks for various needs and budgets.</small>
+        </div>
+      </div>
+
+      <div class="thumbnail-3 flex w-full justify-between gap-[20px]">
+        <img src="assets/images/image-gaming-growth.jpg" class="w-[100px]">
+          <div class="thumbnail w-full flex flex-col justify-between items-start">
+            <p class="text-[30px] font-[500]">03</p>
+            <b class="text-[18px]">The Growth of Gaming</b>
+            <small>How the pandemic has sparked fresh opportunities.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Home
+  New
+  Popular
+  Trending
+  Categories
+
+  The Bright Future of Web 3.0?
+
+  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  But is it really fulfilling its promise?
+
+  Read more
+
+  New 
+
+  Hydrogen VS Electric Cars
+  Will hydrogen-fueled cars ever catch up to EVs?
+
+  The Downsides of AI Artistry
+  What are the possible adverse effects of on-demand AI image generation?
+
+  Is VC Funding Drying Up?
+  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+
+  01
+  Reviving Retro PCs
+  What happens when old PCs are given modern upgrades?
+
+  02
+  Top 10 Laptops of 2022
+  Our best picks for various needs and budgets.
+
+  03
+  The Growth of Gaming
+  How the pandemic has sparked fresh opportunities.
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="index.js"></script>
+</body>
+</html>
